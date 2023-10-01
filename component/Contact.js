@@ -9,21 +9,21 @@ class ContactScreeen extends Component {
         return (
             <View style={styles.main}>
                 <Image source={bg} style={{marginTop: 20, width: 400, height: 200}}/>
-                <Text style={{fontWeight: 'bold', fontSize: 30, textAlign: 'center', marginTop: 20}}>Liên hệ bác sĩ</Text>
+                <Text style={{fontWeight: 'bold', fontSize: 30, textAlign: 'center', marginTop: 20}}>Contact the doctor</Text>
                 <View style={styles.bs}>
-                    <Text style={{paddingLeft: 5, paddingTop: 25, fontSize: 20, fontWeight: 'bold'}}>Bác sĩ Dũng</Text>
+                    <Text style={{paddingLeft: 5, paddingTop: 25, fontSize: 20, fontWeight: 'bold'}}>Doctor Dung</Text>
                     <View style={{marginLeft: 50, padding: 20}}>
                         <Button 
-                            title='Liên hệ'
+                            title='Contact'
                             onPress={()=>{Linking.openURL('tel:0931802917');}}
                         />
                     </View>
                 </View>
                 <View style={styles.bs}>
-                    <Text style={{paddingLeft: 5, paddingTop: 25, fontSize: 20, fontWeight: 'bold'}}>Bác sĩ Hân</Text>
+                    <Text style={{paddingLeft: 5, paddingTop: 25, fontSize: 20, fontWeight: 'bold'}}>Doctor Han</Text>
                     <View style={{marginLeft: 65, padding: 20}}>
                         <Button 
-                            title='Liên hệ'
+                            title='Contact'
                         />
                     </View>
                 </View>

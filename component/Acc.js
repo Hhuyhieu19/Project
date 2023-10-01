@@ -39,36 +39,36 @@ class Acc extends Component{
                                 color="#000000"
                                 style={{paddingTop: 10, paddingLeft: 10, paddingBottom: 10, paddingRight: 5, color: '#ffffff', fontSize: 24}}
                             />
-                            <Text style={{color: '#ffffff', paddingTop: 8, paddingRight: 10 ,fontSize: 17}}>Trở về</Text>
+                            <Text style={{color: '#ffffff', paddingTop: 8, paddingRight: 10 ,fontSize: 17}}>Return</Text>
                         </View>
 
                         </Pressable>
                     </View>
                     <View style={styles.form}>
                         <View style={{marginTop: 20}}>
-                            <Text style={{marginLeft: 10, fontWeight: 'bold'}}>Họ và Tên: </Text>
+                            <Text style={{marginLeft: 10, fontWeight: 'bold'}}>First and last name: </Text>
                             <TextInput 
-                                placeholder='Họ và tên'
+                                placeholder='First and last name'
                                 style={{borderWidth: 1, marginTop: 5, marginLeft: 10, marginRight: 10, padding: 10, borderRadius: 10}}
                             />
                         </View>
                         <View style={{marginTop: 20}}>
-                            <Text style={{marginLeft: 10, fontWeight: 'bold'}}>Số điện thoại: </Text>
+                            <Text style={{marginLeft: 10, fontWeight: 'bold'}}>Phone number: </Text>
                             <TextInput 
-                                placeholder='Số điện thoại'
+                                placeholder='Phone number'
                                 style={{borderWidth: 1, marginTop: 5, marginLeft: 10, marginRight: 10, padding: 10, borderRadius: 10}}
                             />
                         </View>
                         <View style={{marginTop: 20}}>
-                            <Text style={{marginLeft: 10, fontWeight: 'bold'}}>Địa chỉ: </Text>
+                            <Text style={{marginLeft: 10, fontWeight: 'bold'}}>Address: </Text>
                             <TextInput 
-                                placeholder='Địa chỉ'
+                                placeholder='Address'
                                 style={{borderWidth: 1, marginTop: 5, marginLeft: 10, marginRight: 10, padding: 10, borderRadius: 10}}
                             />
                         </View>
                         <Pressable style={{backgroundColor: '#008000', borderRadius: 10, marginTop: 20, marginLeft: 10, marginRight: 200}}>
                             <View style={{marginLeft: 30}}>
-                                <Text style={{color: '#ffffff', paddingTop: 10 ,fontSize: 17, paddingBottom: 10}}>Cập nhật</Text>
+                                <Text style={{color: '#ffffff', paddingTop: 10 ,fontSize: 17, paddingBottom: 10}}>Update</Text>
                             </View>
                         </Pressable>
                     </View>

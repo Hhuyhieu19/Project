@@ -23,7 +23,7 @@ export default function BottomTabs(){
                     name="Home" 
                     component={PatientScreeen} 
                     options={{
-                        tabBarLabel: 'Trang chủ',
+                        tabBarLabel: 'Home',
                         tabBarIcon: ({ color }) => (
                           <Icon name="home" color={color} size={26} />
                         ),
@@ -33,7 +33,7 @@ export default function BottomTabs(){
                     name="Covid" 
                     component={InfoCoVid} 
                     options={{
-                        tabBarLabel: 'Thông tin',
+                        tabBarLabel: 'Information',
                         tabBarIcon: ({ color }) => (
                           <Icon name="info-circle" color={color} size={26} />
                         ),
@@ -43,7 +43,7 @@ export default function BottomTabs(){
                     name="Contact" 
                     component={ContactScreeen} 
                     options={{
-                        tabBarLabel: 'Liên hệ',
+                        tabBarLabel: 'Contact',
                         tabBarIcon: ({ color }) => (
                           <Icon name="phone-square" color={color} size={26} />
                         ),
@@ -53,7 +53,7 @@ export default function BottomTabs(){
                     name="Account" 
                     component={RouteSetting} 
                     options={{
-                        tabBarLabel: 'Cài đặt',
+                        tabBarLabel: 'Setting',
                         tabBarIcon: ({ color }) => (
                           <Icon name="cog" color={color} size={26} />
                         ),

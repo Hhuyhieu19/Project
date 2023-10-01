@@ -52,16 +52,16 @@ handleSubmit = () => {
       <Formik>
         <ImageBackground source={bg} resizeMode="cover" style={styles.main}>
           <View style={styles.container}>
-            <Text style={styles.title}>ĐĂNG NHẬP</Text>
+            <Text style={styles.title}>LOG IN</Text>
           </View>
           <View style={styles.form}>
-            <TextInput style={styles.usn} name='username' placeholder='Tên tài khoản' onChangeText={(text) => {this.setState({username: text})}}/>
+            <TextInput style={styles.usn} name='username' placeholder='Account name' onChangeText={(text) => {this.setState({username: text})}}/>
           </View>
           <View style={styles.form2}>
-            <TextInput style={styles.usn} name='password' secureTextEntry placeholder='Mật khẩu' onChangeText={(text) => {this.setState({password: text})}}/>
+            <TextInput style={styles.usn} name='password' secureTextEntry placeholder='Password' onChangeText={(text) => {this.setState({password: text})}}/>
           </View>
           <View style={styles.form2}>
-            <Button title='Đăng nhập' onPress={() => {this.handleSubmit()}}/>
+            <Button title='Log in' onPress={() => {this.handleSubmit()}}/>
           </View>
           <Modal
             animationType="slide"
@@ -78,7 +78,7 @@ handleSubmit = () => {
                 color="#5cb85c"
                 style={{marginBottom: 10, fontSize: 70}}
               />
-              <Text style={styles.modalText}>ĐĂNG NHẬP THÀNH CÔNG</Text>
+              <Text style={styles.modalText}>LOGGED IN SUCCESSFULLY</Text>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
                 onPress={() => this.props.navigation.navigate('Patient')}>

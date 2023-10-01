@@ -11,10 +11,10 @@ export default function HomeScreeen({navigation}) {
         <Text style={styles.title}>HEALTHCARE</Text>
       </View>
       <View style={styles.button1}>
-        <Button title='Đăng nhập' onPress={() => navigation.navigate('Login')}/>
+        <Button title='Log in' onPress={() => navigation.navigate('Login')}/>
       </View>
       <View style={styles.button2}>
-        <Button title='Đăng ký' color='#87cefa' onPress={() => navigation.navigate('Regis')} />
+        <Button title='Register' color='#87cefa' onPress={() => navigation.navigate('Regis')} />
       </View>
     </View>
   );

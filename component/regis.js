@@ -44,19 +44,19 @@ handleRegis = () => {
     return (
       <ImageBackground source={bg} resizeMode="cover" style={styles.main}>
         <View style={styles.container}>
-          <Text style={styles.title}>ĐĂNG KÝ TÀI KHOẢN</Text>
+          <Text style={styles.title}>ACCOUNT REGISTRATION</Text>
         </View>
         <View style={styles.form}>
-          <TextInput style={styles.usn} placeholder='Tên người dùng' name='name' onChangeText={(text) => {this.setState({name: text})}}/>
+          <TextInput style={styles.usn} placeholder='User name' name='name' onChangeText={(text) => {this.setState({name: text})}}/>
         </View>
         <View style={styles.form2}>
-          <TextInput style={styles.usn} placeholder='Tên tài khoản' name='username' onChangeText={(text) => {this.setState({username: text})}}/>
+          <TextInput style={styles.usn} placeholder='Account name' name='username' onChangeText={(text) => {this.setState({username: text})}}/>
         </View>
         <View style={styles.form2}>
-          <TextInput style={styles.usn} secureTextEntry  placeholder='Mật khẩu' name='password' onChangeText={(text) => {this.setState({password: text})}}/>
+          <TextInput style={styles.usn} secureTextEntry  placeholder='Password' name='password' onChangeText={(text) => {this.setState({password: text})}}/>
         </View>
         <View style={styles.form2}>
-          <Button title='Đăng ký' onPress={() => {this.handleRegis()}}/>
+          <Button title='Register' onPress={() => {this.handleRegis()}}/>
         </View>
         <Modal
             animationType="slide"
@@ -73,7 +73,7 @@ handleRegis = () => {
                 color="#5cb85c"
                 style={{marginBottom: 10, fontSize: 70}}
               />
-              <Text style={styles.modalText}>ĐĂNG KÝ TÀI KHOẢN THÀNH CÔNG</Text>
+              <Text style={styles.modalText}>Successful account registration</Text>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
                 onPress={() => this.props.navigation.navigate('Patient')}>
@@ -97,7 +97,7 @@ handleRegis = () => {
                 color="#ff0000"
                 style={{marginBottom: 10, fontSize: 70}}
               />
-              <Text style={styles.modalText}>+TÊN TÀI KHOẢN ĐÃ TỒN TẠI</Text>
+              <Text style={styles.modalText}>+THIS ACCOUNT HAS ALREADY EXISTED</Text>
               <Pressable
                 style={[styles.button, styles.buttonClose2]}
                 onPress={() => this.setState({errModal: !errModal})}>

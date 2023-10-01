@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { AppRegistry, StyleSheet, Text, View, Image, Button} from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, Image, Button } from 'react-native';
 import img1 from '../assets/img/slide3.jpg'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import firebase from 'firebase/compat/app';
@@ -10,7 +10,7 @@ import 'firebase/compat/database';
 
 class PatientScreeen extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             list: []
@@ -28,7 +28,7 @@ class PatientScreeen extends Component {
         firebase.initializeApp(firebaseConfig);
     }
 
-    componentDidMount(){
+    componentDidMount() {
         const readUserData = () => {
             const ref = firebase.database().ref('SM001/')
             ref.on('value', (snapshot) => {
@@ -41,38 +41,38 @@ class PatientScreeen extends Component {
         readUserData();
     }
 
-    render(){
+    render() {
         return (
             <View style={styles.main}>
                 <View style={styles.container}>
-                    <Image source={img1} style={styles.img}/>
+                    <Image source={img1} style={styles.img} />
                 </View>
                 <View style={styles.container2}>
-                    <Text style={styles.title}>Theo dõi sức khỏe</Text>
+                    <Text style={styles.title}>Health monitoring</Text>
                 </View>
                 <View style={styles.tempBody}>
-                    <Icon 
+                    <Icon
                         name='thermometer-empty'
                         color="#ffa500"
-                        style={{marginRight: 50,fontSize: 60, marginLeft: 20, padding: 10}}
+                        style={{ marginRight: 50, fontSize: 60, marginLeft: 20, padding: 10 }}
                     />
-                    <Text style={{marginLeft: 20, fontSize: 40, paddingTop: 10}}>{parseFloat(this.state.list.tempBody).toFixed(1)} *C</Text>
+                    <Text style={{ marginLeft: 20, fontSize: 40, paddingTop: 10 }}>{parseFloat(this.state.list.tempBody).toFixed(1)} *C</Text>
                 </View>
                 <View style={styles.heartBeat}>
-                    <Icon 
+                    <Icon
                         name='heartbeat'
                         color="#ff0000"
-                        style={{marginRight: 20,fontSize: 60, marginLeft: 20, padding: 10}}
+                        style={{ marginRight: 20, fontSize: 60, marginLeft: 20, padding: 10 }}
                     />
-                    <Text style={{marginLeft: 20, fontSize: 40, paddingTop: 10}}>{this.state.list.heartBeat} BPM</Text>
+                    <Text style={{ marginLeft: 20, fontSize: 40, paddingTop: 10 }}>{this.state.list.heartBeat} BPM</Text>
                 </View>
                 <View style={styles.oxy}>
-                    <Icon 
+                    <Icon
                         name='tint'
                         color="#00bfff"
-                        style={{marginRight: 60,fontSize: 60, marginLeft: 35, padding: 10}}
+                        style={{ marginRight: 60, fontSize: 60, marginLeft: 35, padding: 10 }}
                     />
-                    <Text style={{marginLeft: 20, fontSize: 40, paddingTop: 10}}>{this.state.list.oxyBlood} %</Text>
+                    <Text style={{ marginLeft: 20, fontSize: 40, paddingTop: 10 }}>{this.state.list.oxyBlood} %</Text>
                 </View>
             </View>
         );
@@ -82,32 +82,32 @@ class PatientScreeen extends Component {
 export default PatientScreeen;
 
 const styles = StyleSheet.create({
-    main:{
+    main: {
         backgroundColor: '#ffffff',
         height: 900
     },
-    container:{
+    container: {
         backgroundColor: 'transparent',
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 50
     },
-    container2:{
+    container2: {
         borderLeftWidth: 5,
         backgroundColor: 'transparent',
         marginLeft: 30,
         marginTop: 20
     },
-    title:{
+    title: {
         fontSize: 25,
         fontWeight: 'bold',
         paddingLeft: 10
     },
-    img:{
+    img: {
         width: 350,
         height: 200
     },
-    heartBeat:{
+    heartBeat: {
         borderLeftWidth: 10,
         borderLeftColor: '#ff0000',
         marginLeft: 30,
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: '#ffc0cb',
     },
-    tempBody:{
+    tempBody: {
         backgroundColor: '#ffe4b5',
         borderLeftWidth: 10,
         borderLeftColor: '#ffa500',
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
         marginTop: 40,
         flexDirection: 'row',
     },
-    oxy:{
+    oxy: {
         borderLeftWidth: 10,
         borderLeftColor: '#00bfff',
         marginLeft: 30,
